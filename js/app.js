@@ -9,10 +9,10 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
-  let mySum = a + b;
-  let myStr = `The sum of ${a} and ${b} is ${mySum}.`;
+  let sum = a + b;
+  let myStr = `The sum of ${a} and ${b} is ${sum}.`;
 
-  return [mySum, myStr];
+  return [sum, myStr];
 }
 
 // Here is the test for sum(); uncomment it to run it
@@ -30,10 +30,10 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
-  let myMultiply = a * b;
-  let myStr = `The product of ${a} and ${b} is ${myMultiply}.`;
+  let product = a * b;
+  let myStr = `The product of ${a} and ${b} is ${product}.`;
 
-  return [myMultiply, myStr];
+  return [product, myStr];
 }
 
 // Here is the test for multiply(); uncomment it to run it
@@ -54,11 +54,17 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-  let sum1 = sum(`${mySum} +`
-  let str1 = `${a} and ${b} and ${c} sum to 16`;
-  let str2 = `The product of ${a} and ${b} and ${c} is 140`;
+  let sum1 = sum(a, b)[0];
+  let sum2 = sum(sum1, c)[0];
 
+  let product1 = multiply(a, b)[0];
+  let product2 = multiply(product1, c)[0];
 
+  let str1 = `${a} and ${b} and ${c} sum to ${sum2}.`;
+  let str2 = `The product of ${a} and ${b} and ${c} is ${product2}.`;
+
+  return [sum2, product2, str1, str2];
+}
   
   // Here is the test for sumAndMultiply(); uncomment it to run it
 testSumAndMultiply(4,7,5);
@@ -135,4 +141,3 @@ function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 // testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
-}
