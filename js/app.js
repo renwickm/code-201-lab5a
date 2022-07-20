@@ -85,20 +85,23 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-  let sumArray = 0;
-  let response ="";
-  for (let i = 0; i < testArray.length; i++) {
-    sumArray = sum(sumArray, testArray[i])[0];
-    response = response + `${testArray[i]}`;
-    if (i !== testArray.length -1) {
-      response += ',';
-    }
-  }
+
+  let firstNum = sumArr[0];
+  // console.log(firstNum); 
+  let secondNum = sumArr[1];
+  let thirdNum = sumArr[2];
+  // console.log(firstNum, secondNum, thirdNum);
+  let sum1 = sum(firstNum, secondNum)[0];
+  // console.log(sum1);
+  let sum2 = sum(sum1, thirdNum)[0];
+  // console.log(sum2);
+  return [sum2, `${firstNum},${secondNum},${thirdNum} was passed in as an array of numbers, and ${sum2} is their sum`];
 }
+console.log(sumArray(testArray));
 
-let response = `${sumArray} was passed in as an array of numbers, and ${sumArray} is their sum.`;
+// response = `${runningTotal} was passed in as an array of numbers, and ${runningTotal} is their sum.`;
 
-return [sumArray, response]
+
 
 // Here is the test for sumArray(); uncomment it to run it
 
