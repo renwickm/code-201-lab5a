@@ -95,9 +95,9 @@ function sumArray(sumArr) { //eslint-disable-line
   // console.log(sum1);
   let sum2 = sum(sum1, thirdNum)[0];
   // console.log(sum2);
-  return [sum2, `${firstNum},${secondNum},${thirdNum} was passed in as an array of numbers, and ${sum2} is their sum`];
+  return [sum2, `${firstNum},${secondNum},${thirdNum} was passed in as an array of numbers, and ${sum2} is their sum.`];
 }
-console.log(sumArray(testArray));
+// console.log(sumArray(testArray));
 
 // response = `${runningTotal} was passed in as an array of numbers, and ${runningTotal} is their sum.`;
 
@@ -121,11 +121,21 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-
+  
+  let firstNum = multArr[0];
+  // console.log(firstNum);
+  let secondNum = multArr[1];
+  let thirdNum = multArr[2];
+  // console.log(firstNum, secondNum, thirdNum);
+  let product1 = multiply(firstNum, secondNum)[0];
+  // console.log(product1);
+  let product2 = multiply(product1, thirdNum)[0];
+  // console.log(product2);
+  return [product2, `The numbers ${firstNum},${secondNum},${thirdNum} have a product of ${product2}.`];
 }
-
+// console.log(multiplyArray(testArray));
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
